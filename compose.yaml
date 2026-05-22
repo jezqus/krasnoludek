@@ -1,0 +1,10 @@
+services:
+  apache:
+    build:
+      context: .
+      dockerfile: php_apache_dockerfile
+    ports:
+      - "8080:80"
+      - "8081:443"
+    volumes:
+      - ./htdocs:/var/www/html
